@@ -189,7 +189,7 @@ body {
     transition: 0.3s;
     background-color: rgba(93, 133, 193, 0.05);
     margin-right: 10px;
-    z-index: 1; /* Menjamin elemen ini di atas dan bisa diklik */
+    z-index: 10; /* Menjamin elemen ini di atas dan bisa diklik */
     position: relative;
     cursor: pointer;
     text-decoration: none;
