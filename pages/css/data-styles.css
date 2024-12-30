@@ -385,19 +385,26 @@ font-size: 16px;
     }
 }
 
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -200px;
+    left: -200px; /* Sidebar tersembunyi */
     height: 100%;
     width: 200px;
     background-color: rgba(151,106,106,0.796);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     -webkit-tap-highlight-color: transparent;
-    transition: left 0.3s ease;
+    transition: left 0.3s ease; /* Transisi saat sidebar muncul atau hilang */
     z-index: 1000;
 }
 
+/* Sidebar yang ditampilkan */
+.sidebar.show {
+    left: 0; /* Sidebar tampil */
+}
+
+/* Menu List */
 .sidebar ul {
     list-style: none;
     padding: 20px;
@@ -422,6 +429,7 @@ font-size: 16px;
     -webkit-tap-highlight-color: transparent;
 }
 
+/* Button untuk toggle Sidebar */
 .menu-btn {
     position: fixed;
     top: 10px;
@@ -431,13 +439,18 @@ font-size: 16px;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1001; /* Pastikan tombol berada di atas */
     font-size: 30px;
-    transition: left 5.0s ease;
+    transition: left 0.3s ease;
     border-radius: 0;
     width: 40px;
     height: 40px;
     -webkit-tap-highlight-color: transparent;
+}
+
+/* Ketika tombol berubah */
+.menu-btn i {
+    font-size: 30px;
 }
 
 .footer {
