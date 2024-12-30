@@ -69,15 +69,6 @@ function keDomainBlog() {
     handleButtonClick({ target: batten[4] });
 }
 
-// Smooth scrolling untuk anchor links
-document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const sectionId = this.getAttribute("href").substring(1);
-        document.querySelector(`#${sectionId}`).scrollIntoView({ behavior: "smooth" });
-    });
-});
-
 // Eksekusi audio dan fullscreen
 function exec() {
     document.getElementById('audio').play();
