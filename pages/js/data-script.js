@@ -26,7 +26,7 @@ batten.forEach(btn => {
     btn.addEventListener("click", handleButtonClick);
 });
 
-/// Menangani toggle sidebar
+// Menangani toggle sidebar
 document.getElementById('menuBtn').addEventListener('click', function () {
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('show'); // Menambahkan/ menghapus kelas 'show' untuk menampilkan/menyembunyikan sidebar
