@@ -26,26 +26,26 @@ batten.forEach(btn => {
     btn.addEventListener("click", handleButtonClick);
 });
 
-// Menangani toggle sidebar
+/// Menangani toggle sidebar
 document.getElementById('menuBtn').addEventListener('click', function () {
     const sidebar = document.getElementById('sidebar');
-    const menuBtn = document.getElementById('menuBtn');
+    sidebar.classList.toggle('show'); // Menambahkan/ menghapus kelas 'show' untuk menampilkan/menyembunyikan sidebar
 
-    if (sidebar.style.left === '0px') {
-        sidebar.style.left = '-200px'; // Menyembunyikan sidebar
-        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    // Mengubah ikon menu sesuai dengan status sidebar
+    const menuBtn = document.getElementById('menuBtn');
+    if (sidebar.classList.contains('show')) {
+        menuBtn.innerHTML = '<i class="fas fa-times"></i>'; // Ganti dengan ikon 'x' ketika sidebar tampil
     } else {
-        sidebar.style.left = '0px'; // Menampilkan sidebar
-        menuBtn.innerHTML = '<i class="fas fa-times"></i>';
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>'; // Kembalikan ke ikon menu jika sidebar tersembunyi
     }
 });
 
-// Menangani klik pada sidebar untuk membuka link di tab baru
+// Pastikan link di dalam sidebar membuka di tab baru
 document.querySelectorAll('.sidebar-item').forEach(item => {
     item.addEventListener('click', function (e) {
-        e.preventDefault(); // Mencegah aksi default (navigasi)
-        const targetUrl = this.getAttribute('href'); // Mendapatkan URL dari link
-        window.open(targetUrl, '_blank'); // Membuka URL di tab baru
+        // Link dibuka di tab baru
+        const targetUrl = this.getAttribute('href');
+        window.open(targetUrl, '_blank');
     });
 });
 
