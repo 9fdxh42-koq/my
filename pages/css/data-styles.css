@@ -385,26 +385,18 @@ font-size: 16px;
     }
 }
 
-/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -200px; /* Sidebar tersembunyi */
+    left: -200px; /* Tersembunyi secara default */
     height: 100%;
     width: 200px;
-    background-color: rgba(151,106,106,0.796);
+    background-color: rgba(151, 106, 106, 0.796);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    -webkit-tap-highlight-color: transparent;
-    transition: left 0.3s ease; /* Transisi saat sidebar muncul atau hilang */
+    transition: left 0.3s ease;
     z-index: 1000;
 }
 
-/* Sidebar yang ditampilkan */
-.sidebar.show {
-    left: 0; /* Sidebar tampil */
-}
-
-/* Menu List */
 .sidebar ul {
     list-style: none;
     padding: 20px;
@@ -426,50 +418,19 @@ font-size: 16px;
 
 .sidebar a:hover {
     background-color: #b67575;
-    -webkit-tap-highlight-color: transparent;
 }
 
-/* Button untuk toggle Sidebar (hamburger) */
 .menu-btn {
     position: fixed;
-    top: 10px;
-    left: 10px;
-    color: white;
-    background-color: transparent;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 1001; /* Pastikan tombol berada di atas */
-    font-size: 30px;
-    transition: left 0.3s ease;
-    border-radius: 0;
-    width: 40px;
-    height: 40px;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* Menjaga posisi tombol hamburger agar lebih terpisah */
-.menu-btn {
-    top: 10px;  /* Jaga jarak dengan bagian atas */
-}
-
-/* Button close 'X' di dalam sidebar */
-.sidebar .close-btn {
-    position: absolute;
-    top: 10px;
+    top: 10px; /* Menempatkan tombol lebih jauh dari atas */
     left: 10px;
     color: white;
     background-color: transparent;
     border: none;
     font-size: 30px;
-    z-index: 1002;
+    z-index: 1001;
     cursor: pointer;
-}
-
-/* Styling untuk button di dalam sidebar untuk navigasi */
-.sidebar-item {
-    margin-top: 30px;  /* Menambah jarak agar tombol di bawah tidak terlalu dekat */
-}
+    }
 
 .footer {
     width: 100%;
