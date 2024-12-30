@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obscura || Personal card</title>
-    <link rel="icon" href="/pages/favicon.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -54,6 +53,21 @@
             <h2 class="card-jobtitle">Just A Dreamer</h2>
         </div>
         <div class="card-main">
+        <!-- Blog Section -->
+<div class="card-section" id="blog">
+    <div class="card-content">
+        <div class="card-subtitle">Latest Blog Posts</div>
+        <ul class="blog-list">
+            <li><a href="https://blog.obscura.web.id/post1">"How to Embrace Change in Life"</a></li>
+            <li><a href="https://blog.obscura.web.id/post2">"Top 10 Lessons Learned in 2024"</a></li>
+            <li><a href="https://blog.obscura.web.id/post3">"The Power of Consistency: Achieving Long-term Goals"</a></li>
+            <li><a href="https://blog.obscura.web.id/post4">"Breaking Down Complex Problems into Simple Steps"</a></li>
+            <li><a href="https://blog.obscura.web.id/post5">"Building Resilience in a Fast-paced World"</a></li>
+            <li><a href="https://blog.obscura.web.id/post6">"Mastering Time Management for Productivity"</a></li>
+            <li><a href="https://blog.obscura.web.id/post7">"Why Collaboration is Key to Success"</a></li>
+        </ul>
+    </div>
+</div>
             <div class="card-section is-active" id="about">
                 <div class="card-content">
                     <div class="card-subtitle">Obscura Student, 01-01-2025</div>
@@ -168,27 +182,13 @@
         </div>
     </div>
 </div>
-            <!-- Blog Section -->
-<div class="card-section" id="blog">
-    <div class="card-content">
-        <div class="card-subtitle">Latest Blog Posts</div>
-        <ul class="blog-list">
-            <li><a href="https://blog.obscura.web.id/post1">"How to Embrace Change in Life"</a></li>
-            <li><a href="https://blog.obscura.web.id/post2">"Top 10 Lessons Learned in 2024"</a></li>
-            <li><a href="https://blog.obscura.web.id/post3">"The Power of Consistency: Achieving Long-term Goals"</a></li>
-            <li><a href="https://blog.obscura.web.id/post4">"Breaking Down Complex Problems into Simple Steps"</a></li>
-            <li><a href="https://blog.obscura.web.id/post5">"Building Resilience in a Fast-paced World"</a></li>
-            <li><a href="https://blog.obscura.web.id/post6">"Mastering Time Management for Productivity"</a></li>
-            <li><a href="https://blog.obscura.web.id/post7">"Why Collaboration is Key to Success"</a></li>
-        </ul>
-    </div>
-</div>
+            
             <div class="card-batten">
-                <button data-section="#about" class="is-active" onclick="keDomainAbout()">HOME</button>
-                <button data-section="#experience" onclick="keDomainProgres()">PROGRESS</button>
-                <button data-section="#contact" onclick="keDomainContacts()">CONTACT</button>
-                <button data-section="#testimonials" onclick="keDomainTesti()">TESTIMONIALS</button>
-                <button data-section="#blog" onclick="keDomainBlog()">BLOG</button>
+    <button data-section="#about" class="is-active">HOME</button>
+    <button data-section="#experience">PROGRESS</button>
+    <button data-section="#contact">CONTACT</button>
+    <button data-section="#testimonials">TESTIMONIALS</button>
+    <button data-section="#blog">BLOG</button>
             </div>
         </div>
     </div><!-- end div class card about -->
