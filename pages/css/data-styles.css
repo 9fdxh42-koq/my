@@ -173,22 +173,15 @@ body {
 
 .card-social {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0 20px;
-    margin-bottom: 30px;
-}
-
-.card-social svg {
-    fill: #b37676;
-    width: 16px;
-    display: block;
-    transition: 0.3s;
+    margin-top: 10px;
 }
 
 .card-social a {
-    color: #000000;
-    height: 32px;
-    width: 32px;
+    color: #000;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
@@ -196,15 +189,20 @@ body {
     transition: 0.3s;
     background-color: rgba(93, 133, 193, 0.05);
     margin-right: 10px;
-    -webkit-tap-highlight-color: transparent;
+    z-index: 1; /* Menjamin elemen ini di atas dan bisa diklik */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.card-social a:hover svg {
-    fill: #b37676;
+.card-social a:hover {
+    background-color: rgba(93, 133, 193, 0.1);
 }
 
-.card-social a:last-child {
-    margin-right: 0;
+.card-social a svg {
+    fill: #000;
+    width: 24px;
+    height: 24px;
 }
 
 .card-batten {
