@@ -26,18 +26,27 @@ batten.forEach(btn => {
     btn.addEventListener("click", handleButtonClick);
 });
 
-// Menangani sidebar toggle
+// Menangani toggle sidebar
 document.getElementById('menuBtn').addEventListener('click', function () {
     const sidebar = document.getElementById('sidebar');
     const menuBtn = document.getElementById('menuBtn');
 
     if (sidebar.style.left === '0px') {
-        sidebar.style.left = '-200px'; // hide
+        sidebar.style.left = '-200px'; // Menyembunyikan sidebar
         menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
     } else {
-        sidebar.style.left = '0px'; // show
+        sidebar.style.left = '0px'; // Menampilkan sidebar
         menuBtn.innerHTML = '<i class="fas fa-times"></i>';
     }
+});
+
+// Menangani klik pada sidebar untuk membuka link di tab baru
+document.querySelectorAll('.sidebar-item').forEach(item => {
+    item.addEventListener('click', function (e) {
+        e.preventDefault(); // Mencegah aksi default (navigasi)
+        const targetUrl = this.getAttribute('href'); // Mendapatkan URL dari link
+        window.open(targetUrl, '_blank'); // Membuka URL di tab baru
+    });
 });
 
 // Fungsi tambahan untuk tombol navigasi
