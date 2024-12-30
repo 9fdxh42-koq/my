@@ -29,26 +29,27 @@ batten.forEach(btn => {
 // Menangani toggle sidebar
 document.getElementById('menuBtn').addEventListener('click', function () {
     const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('show'); // Menambahkan/ menghapus kelas 'show' untuk menampilkan/menyembunyikan sidebar
-
-    // Mengubah ikon menu sesuai dengan status sidebar
     const menuBtn = document.getElementById('menuBtn');
+
+    // Toggle kelas 'show' untuk menampilkan/menyembunyikan sidebar
+    sidebar.classList.toggle('show');
+
+    // Ubah ikon menu sesuai status sidebar
     if (sidebar.classList.contains('show')) {
-        menuBtn.innerHTML = '<i class="fas fa-times"></i>'; // Ganti dengan ikon 'x' ketika sidebar tampil
+        menuBtn.innerHTML = '<i class="fas fa-times"></i>'; // Ikon 'x' untuk menutup
     } else {
-        menuBtn.innerHTML = '<i class="fas fa-bars"></i>'; // Kembalikan ke ikon menu jika sidebar tersembunyi
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>'; // Ikon 'menu' untuk membuka
     }
 });
 
 // Pastikan link di dalam sidebar membuka di tab baru
 document.querySelectorAll('.sidebar-item').forEach(item => {
     item.addEventListener('click', function (e) {
-        // Link dibuka di tab baru
+        e.preventDefault(); // Hindari perilaku bawaan
         const targetUrl = this.getAttribute('href');
         window.open(targetUrl, '_blank');
     });
 });
-
 // Fungsi tambahan untuk tombol navigasi
 function keDomainAbout() {
     handleButtonClick({ target: batten[0] });
