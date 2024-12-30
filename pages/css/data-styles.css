@@ -429,7 +429,7 @@ font-size: 16px;
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Button untuk toggle Sidebar */
+/* Button untuk toggle Sidebar (hamburger) */
 .menu-btn {
     position: fixed;
     top: 10px;
@@ -448,9 +448,27 @@ font-size: 16px;
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Ketika tombol berubah */
-.menu-btn i {
+/* Menjaga posisi tombol hamburger agar lebih terpisah */
+.menu-btn {
+    top: 10px;  /* Jaga jarak dengan bagian atas */
+}
+
+/* Button close 'X' di dalam sidebar */
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background-color: transparent;
+    border: none;
     font-size: 30px;
+    z-index: 1002;
+    cursor: pointer;
+}
+
+/* Styling untuk button di dalam sidebar untuk navigasi */
+.sidebar-item {
+    margin-top: 30px;  /* Menambah jarak agar tombol di bawah tidak terlalu dekat */
 }
 
 .footer {
