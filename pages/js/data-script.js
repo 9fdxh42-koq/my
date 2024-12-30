@@ -16,9 +16,11 @@ const handleButtonClick = e => {
     e.target.classList.add("is-active");
     section.classList.add("is-active");
 
-    // Menambahkan history state tanpa memuat ulang halaman
-    window.history.pushState({}, '', targetSection);
+    // Menghindari duplikasi URL
+    const cleanSection = targetSection.replace('#', ''); // Menghapus tanda '#' dari bagian
+    window.history.pushState({}, '', cleanSection ? `/${cleanSection}` : '/'); // Pastikan path tidak duplikat
 };
+
 
 batten.forEach(btn => {
     btn.addEventListener("click", handleButtonClick);
